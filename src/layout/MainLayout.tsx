@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import styled from 'styled-components'
 import BottomNav from '../components/navigation/BottomNav'
 import Sidebar from '../components/navigation/Sidebar'
+import MiniPlayer from '../components/player/MiniPlayer'
+import { usePlayer } from '../context/PlayerContext'
 
 const LayoutContainer = styled.div`
   min-height: 100vh;
@@ -24,12 +26,15 @@ interface MainLayoutProps {
 }
 
 export default function MainLayout({ children }: MainLayoutProps) {
+  const { currentTrack } = usePlayer()
+
   return (
     <LayoutContainer>
       <Sidebar />
       <MainContent>
         {children}
       </MainContent>
+      {currentTrack && <MiniPlayer track={currentTrack} />}
       <BottomNav />
     </LayoutContainer>
   )
