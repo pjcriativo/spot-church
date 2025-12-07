@@ -1,13 +1,13 @@
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../theme/theme'
 import { GlobalStyles } from '../theme/GlobalStyles'
-import HomeScreen from '../components/HomeScreen/HomeScreen'
+import TrackView from '../components/TrackView/TrackView'
 
-export default function Home() {
+export default function Playlist() {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <HomeScreen />
+            <TrackView />
         </ThemeProvider>
     )
 }

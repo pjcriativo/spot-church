@@ -1,13 +1,13 @@
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../theme/theme'
 import { GlobalStyles } from '../theme/GlobalStyles'
-import HomeScreen from '../components/HomeScreen/HomeScreen'
+import LibraryView from '../components/LibraryView/LibraryView'
 
-export default function Home() {
+export default function Library() {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyles />
-            <HomeScreen />
+            <LibraryView />
         </ThemeProvider>
     )
 }
